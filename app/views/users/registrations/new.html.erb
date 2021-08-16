@@ -1,0 +1,43 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georama:wght@200&family=Montserrat:wght@100;600&display=swap" rel="stylesheet">
+<div class="bgSignUp">
+<h2 class="createAccount">Create Account</h2>
+</br>
+<p class="intro">Start your stock trading journey with us!</br>
+  sign up with your personal info
+</p>
+<div class="formSignUp" id="formSignUp">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"signUpNew", placeholder:"Enter Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"signUpNew", placeholder:"Enter Email" %>
+  </div>
+
+
+  <div class="dropbox"><span class="role">Role</span><%= f.select :role_type, options_for_select([[" ", " "], ["Buyer", "Buyer"], ["Broker", "Broker"]]) %></div>
+,
+  <div class="field">
+    <% if @minimum_password_length %>
+    <% end %><br/>
+    <%= f.password_field :password, autocomplete: "new-password", class:"signUpNew", placeholder:"Enter Password" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"signUpNew", placeholder:"Confirm password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class:"signUpNewBtn" %>
+  </div>
+</br>
+</br>
+<%= render "users/shared/links" %>
+<% end %>
+</div>
+</div>

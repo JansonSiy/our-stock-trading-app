@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :role %>
-    <%= form.text_field :role %>
+    <%= form.label :role %><br />
+    <%= form.select :role, options_for_select([[" ", " "], ["Buyer", "Buyer"], ["Broker", "Broker"]]) %>
   </div>
 
   <div class="field">

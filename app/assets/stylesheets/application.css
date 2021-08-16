@@ -1,15 +1,77 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*{
+    margin: 0vw;
+    padding: 0vw;
+}
+.signUpNew{
+    margin-top: .5vw;
+    fill: none;
+    background: transparent;
+    outline: none;
+    border: white .03vw solid;
+    width: 15vw;
+    height: 1.5vw;
+    padding-left: 1.5vw;
+    color: white;
+}
+::placeholder{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.role{
+    margin-right:10vw; 
+    padding-top: 1vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.dropbox{
+    margin-top: .5vw;
+    padding: .3vw 0vw 0vw 1.5vw;
+    fill: none;
+    background: transparent;
+    outline: none;
+    border: white .03vw solid;
+    width: 15vw;
+    height: 1.1vw;
+    color: white;
+}
+#formSignUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vw;
+}
+.bgSignUp{
+    padding-top: 8vw;
+    margin: 0vw;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/g.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.signUpNewBtn{
+    margin-top: .5vw;
+    width: 16.5vw;
+    height: 1.8vw;
+    background-color: #00B9FF;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1vw;
+    border-radius: 1.5vw;
+}
+.createAccount{
+    font-size: 3vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    width: 100vw;
+    text-align: center;
+    color: white;
+}
+.intro{
+    font-size: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    text-align: center;
+    color: white;
+}
+
