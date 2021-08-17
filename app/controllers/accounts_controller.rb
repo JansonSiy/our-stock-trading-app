@@ -3,7 +3,9 @@ class AccountsController < ApplicationController
 
   # GET /accounts or /accounts.json
   def index
-    @accounts = Account.all
+    # @accounts = Account.all
+    @users = User.all
+
   end
 
   # GET /accounts/1 or /accounts/1.json
@@ -66,4 +68,5 @@ class AccountsController < ApplicationController
     def account_params
       params.require(:account).permit(:username, :password, :email, :role, :credit)
     end
+
 end

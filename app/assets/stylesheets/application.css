@@ -16,11 +16,13 @@
 ::placeholder{
     color: white;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
 }
 .role{
     margin-right:10vw; 
     padding-top: 1vw;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
 }
 .dropbox{
     margin-top: .5vw;
@@ -70,8 +72,39 @@
 .intro{
     font-size: 1vw;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
     width: 100vw;
     text-align: center;
     color: white;
 }
+.rememberMebox{
+    margin-top: .5vw;
+    outline: none;
+    border: white .03vw solid;
+    width: 1vw;
+    height: 1vw;
+    color: white;
+}
+.remenberMe{
+    margin-top: -1vw;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
 
+.link{
+    color:#aae8ff;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin-left: 4.5vw;
+    font-weight: 400;
+}
+#link2{
+    margin-left: 6.5vw;
+    font-weight: 400;
+    
+}
+#link3{
+    margin-left: 6.2vw;
+    font-weight: 400;
+}

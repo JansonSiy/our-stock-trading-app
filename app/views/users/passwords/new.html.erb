@@ -1,16 +1,29 @@
-<h2>Forgot your password?</h2>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georama:wght@200&family=Montserrat:wght@100;400;600&display=swap" rel="stylesheet">
+<div class="bgSignUp">
+<h2 class="createAccount">Forgot your password?</h2>
+</br>
+<p class="intro">Don't worry, we can send you new password</br>
+  to reset and able to log in again
+</p>
+<div id="formSignUp">
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"signUpNew", placeholder:"Enter Email" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send Reset", class:"signUpNewBtn" %>
   </div>
+</br>
+</br>
+<%= link_to 'Log In', new_user_session_path, class:"link", id:"link2" %>
+</br>
+</br>
+<%= link_to 'Sign Up', new_user_registration_path, class:"link", id:"link3" %>
 <% end %>
-
-<%= render "users/shared/links" %>
+</div>
+</div>
