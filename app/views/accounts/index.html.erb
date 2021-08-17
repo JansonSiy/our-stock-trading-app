@@ -1,36 +1,16 @@
 <%= render "layouts/messages" %>
 <h1>Admin:</h1>
 <%= render "layouts/header" %>
-<h1>Accounts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Username</th>
-      <th>Password</th>
-      <th>Email</th>
-      <th>Role</th>
-      <th>Credit</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @accounts.each do |account| %>
-      <tr>
-        <td><%= account.username %></td>
-        <td><%= account.password %></td>
-        <td><%= account.email %></td>
-        <td><%= account.role %></td>
-        <td><%= account.credit %></td>
-        <td><%= link_to 'Show', account %></td>
-        <td><%= link_to 'Edit', edit_account_path(account) %></td>
-        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Account', new_account_path %>
+
+<h1>User List</h1>
+<% @users.each do |user| %>
+    <ul>
+      <li><%= user.id %></li>
+      <li><%= user.name %></li>
+      <li><%= user.email %></li>
+      <li><%= user.role_type %></li>
+      <li><%= user.credit %></li>
+    </ul>
+<% end %>
