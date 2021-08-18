@@ -3,9 +3,7 @@ class AccountsController < ApplicationController
 
   # GET /accounts or /accounts.json
   def index
-    # @accounts = Account.all
     @users = User.all
-
   end
 
   # GET /accounts/1 or /accounts/1.json
@@ -23,17 +21,11 @@ class AccountsController < ApplicationController
 
   # POST /accounts or /accounts.json
   def create
-    @account = Account.new(account_params)
+    @user = User.new(account_params)
 
-    respond_to do |format|
-      if @account.save
-        format.html { redirect_to @account, notice: "Account was successfully created." }
-        format.json { render :show, status: :created, location: @account }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @account.errors, status: :unprocessable_entity }
-      end
-    end
+    @user.save!
+
+    redirect_to accounts_path
   end
 
   # PATCH/PUT /accounts/1 or /accounts/1.json
@@ -66,7 +58,6 @@ class AccountsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def account_params
-      params.require(:account).permit(:username, :password, :email, :role, :credit)
+      params.require(:account).permit(:name, :password, :email, :role_type, :credit)
     end
-
 end
