@@ -1,10 +1,10 @@
-class CreateAccounts < ActiveRecord::Migration[6.1]
+class Accounts < ActiveRecord::Migration[6.1]
   def change
     create_table :accounts do |t|
-      t.string :username
-      t.string :password
+      t.string :name
       t.string :email
-      t.string :role
+      t.string :password
+      t.string :role_type
       t.decimal :credit
 
       t.timestamps

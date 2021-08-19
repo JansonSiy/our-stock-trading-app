@@ -3,7 +3,6 @@ class AccountsController < ApplicationController
 
   # GET /accounts or /accounts.json
   def index
-    # @accounts = Account.all
     @users = User.all
   end
 
@@ -22,12 +21,12 @@ class AccountsController < ApplicationController
 
   # POST /accounts or /accounts.json
   def create
-      @user = User.new(account_params)
+    @user = User.new(account_params)
       
-      @user.save!
+    @user.save!
       # to show errors if there are
 
-      redirect_to accounts_path
+    redirect_to accounts_path
   end
  
   # def create
@@ -76,7 +75,7 @@ class AccountsController < ApplicationController
     def account_params
       params.require(:account).permit(:name, :password, :email, :role_type, :credit)
     end
-
+  
     # protect_from_forgery
     # def resource_name
     #   :user
@@ -91,4 +90,5 @@ class AccountsController < ApplicationController
     # end
 
     # helper_method :resource, :resource_name, :devise_mapping
+
 end
