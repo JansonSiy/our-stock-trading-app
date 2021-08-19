@@ -4,6 +4,10 @@ class AccountsController < ApplicationController
   # GET /accounts or /accounts.json
   def index
     @users = User.all
+
+    # @brokers = User.where(role_type: "Broker")
+
+    # @buyers = User.where(role_type: "Buyer")
   end
 
   # GET /accounts/1 or /accounts/1.json
