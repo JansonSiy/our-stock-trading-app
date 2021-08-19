@@ -1,8 +1,9 @@
 <%= render "layouts/messages" %>
-<h1>Admin:</h1>
+
 <%= render "layouts/header" %>
 
 </br>
+
 <%= link_to 'New Account', new_account_path %>
 
 <h1>User List</h1>
@@ -14,4 +15,5 @@
       <li><%= user.role_type %></li>
       <li><%= user.credit %></li>
     </ul>
+
 <% end %> 
