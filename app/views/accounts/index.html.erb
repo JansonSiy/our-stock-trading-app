@@ -1,18 +1,16 @@
 <%= render "layouts/messages" %>
-<h1>Admin:</h1>
+
 <%= render "layouts/header" %>
-<h1>Accounts</h1>
 
+<%= link_to 'New Account', new_account_path %>
 
-<h1>USER LIST</h1>
+<h1>User List</h1>
 <% @users.each do |user| %>
     <ul>
       <li><%= user.id %></li>
+      <li><%= user.name %></li>
       <li><%= user.email %></li>
+      <li><%= user.role_type %></li>
+      <li><%= user.credit %></li>
     </ul>
 <% end %>
-
-<br>
-<%= link_to 'New Account', new_account_path %>
-</br>
-<%= link_to 'iclick ito', new_user_registration_path %>

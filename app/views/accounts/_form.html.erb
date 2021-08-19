@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
   </div>
 
   <div class="field">
@@ -27,13 +27,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :role %><br />
-    <%= form.select :role, options_for_select([[" ", " "], ["Buyer", "Buyer"], ["Broker", "Broker"]]) %>
+    <%= form.label :role_type %><br />
+    <%= form.select :role_type, options_for_select([[" ", " "], ["Buyer", "Buyer"], ["Broker", "Broker"]]) %>
   </div>
 
   <div class="field">
     <%= form.label :credit %>
-    <%= form.text_field :credit %>
+    <%= form.number_field :credit %>
   </div>
 
   <div class="actions">
