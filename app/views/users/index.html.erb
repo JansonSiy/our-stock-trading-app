@@ -1,0 +1,43 @@
+<h1>USER INDEX</h1>
+
+<%# <% if current_user.role_type == "Buyer" %>
+  <%# <h1>This is BUYERS's display</h1> %>
+<%# <% elsif current_user.role_type == "Broker" %>
+  <%# <h1>This is BROKERS's display</h1> %>
+<%# <% else %>
+<%# <% end %>
+
+<%= link_to 'Create Account', new_user_path %>
+  
+<h1>User List</h1>
+
+<table>
+  <th>
+    <tr>
+      <td>id</td>
+      <td>name</td>
+      <td>email</td>
+      <td>role</td>
+      <td>credit</td>
+      <td>actions</td>
+      <td>actions</td>
+      <td>actions</td>
+    </tr>
+  </th>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.role_type %></td>
+        <td><%= user.credit %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

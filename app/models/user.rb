@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # goes hand in hand in application_controller.rb, need validation if there is value
   validates :name, presence: true
   validates :role_type, presence: true
 end
