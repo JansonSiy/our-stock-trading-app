@@ -15,6 +15,7 @@ class UsersController < ApplicationController\
     @user = User.new(user_params)
  
     if @user.save!
+      UserMailer.with(user: current_user).mailer_created.deliver_later
       sign_out
       redirect_to users_path
     else
